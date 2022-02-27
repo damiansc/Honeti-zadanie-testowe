@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  function popup () {
+  function popup() {
     const openPopupTriggers = $("body").find(`[data-target="login-popup"]`);
     const closePopupTriggers = $("body").find(`[data-target="close-popup"]`);
     const popup = $(".login-popup");
@@ -54,5 +54,27 @@ $(document).ready(function(){
 
   }
 
+  function scrollToSection() {
+    const menuItems = $(".header-nav .scroll-link");
+
+    menuItems.each(function() {
+      let trigger = $(this);
+      const mobileMenuCheckbox = $('#mobile-menu');
+
+      trigger.click(function(e){
+        const target = $(this).attr('href');
+        
+        e.preventDefault()
+        $('html, body').animate({
+          scrollTop: ($(target).offset().top)
+        }, 500);
+
+        mobileMenuCheckbox.prop("checked", false)
+
+      })
+    });
+  }
+ 
   popup()
+  scrollToSection()
 })
