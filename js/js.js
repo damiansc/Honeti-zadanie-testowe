@@ -23,7 +23,7 @@ $(document).ready(function(){
       trigger.click(function(e){
         e.preventDefault()
         window.history.back();
-        window.history.pushState({}, null, "/" );
+        window.history.pushState({}, null, window.location.pathname );
         hidePopup();
       })
     });
