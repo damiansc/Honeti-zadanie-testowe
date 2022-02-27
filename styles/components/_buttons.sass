@@ -1,0 +1,92 @@
+.buttons-group
+  display: flex
+  flex-direction: column
+  gap: 1.9rem
+
+  @media screen and (min-width: $break_md)
+    flex-direction: row
+  
+.button
+  position: relative
+  background-color: transparent
+  border: 1px solid $color_white
+  border-radius: 5px
+  font-family: $basic_font
+  font-size: 0.95rem
+  line-height: 1.5rem
+  font-weight: $weight_semibold
+  color: $color_white
+  padding: 8px
+  min-width: 180px
+  cursor: pointer
+  overflow: hidden
+  z-index: 1
+
+  &--white-bg
+    background-color: $color_white
+    color: $color_orange
+    transition: background-color .3s, color .3s
+
+    &:hover
+      background-color: transparent
+      color: $color_white
+
+  &--orange-bg
+    color: $color_white
+    transition: border-color .3s, color .3s
+
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(180deg, #F3A300 0%, #F07A13 100%)
+      z-index: -1
+      opacity: 1
+      transition: opacity .3s
+
+    &:hover
+      border-color: $color_orange
+      color: $color_orange
+
+      &:before
+        opacity: 0
+
+  &--orange-border
+    color: #E15702
+    border: solid 1px transparent
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, #F3A300, #F07A13)
+    background-origin: border-box
+    background-clip: content-box, border-box
+    box-shadow: 2px 1000px 1px $color_white inset
+    transition: color .3s, box-shadow .3s
+
+    &:hover
+      box-shadow: none
+      color: white
+
+  &--white-border
+    border: 1px solid $color_white
+    color: $color_white
+    transition: background-color .3s, color .3s
+
+    &:hover
+      color: $color_orange
+      background-color: $color_white
+
+.scroll-btn
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 40px
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  background: linear-gradient(180deg, #F3A300 0%, #F07A13 100%)
+  border-radius: 5px
+  color: $color_white
+  font-size: 1.25rem

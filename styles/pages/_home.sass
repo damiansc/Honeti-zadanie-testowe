@@ -1,0 +1,398 @@
+.intro-section
+  display: flex
+  align-items: center
+  height: 100vh
+  max-height: 690px
+  background: linear-gradient(107.81deg, #2E22AB 9.97%, #CF469F 90.03%)
+  padding: 8rem 0
+  overflow: hidden
+  position: relative
+
+  @media screen and (min-width: $break_lg)
+    max-height: 889px
+
+.intro-description
+  max-width: 733px
+  color: $color_white
+
+  @media screen and (min-width: $break_md)
+    width: 50%
+
+  @media screen and (min-width: $break_lg)
+    margin-left: 3rem
+
+  &__text
+    line-height: 1.5rem
+    font-weight: $weight_medium
+    margin: 0.95rem 0 2rem
+
+.intro-image
+  display: none
+  
+  @media screen and (min-width: $break_md)
+    display: block
+    position: absolute
+    right: 0
+    bottom: 0
+    transform: translate(15%, 10%)
+
+  @media screen and (min-width: $break_xxl)
+    transform: translate(-30%, 14%)
+
+  &__image
+    width: 60vh
+    height: auto
+    max-width: 380px
+
+    @media screen and (min-width: $break_lg)
+      max-width: 602px
+
+.curve-bg
+  position: absolute
+  bottom: 0
+  left: 50%
+  background-color: $color_white
+  height: 60px
+  border-radius: 50%
+  transform: translate(-50%, 50%)
+  width: 115vw
+
+  @media screen and (min-width: $break_xxl)
+    height: 200px
+
+.hiw-section
+  padding: 2rem 0 4rem
+
+  @media screen and (min-width: $break_lg)
+    padding: 0 0 6.7rem 0
+
+  .section-title
+    text-align: center
+    color: $color_darkergray
+
+.steps
+  display: grid
+  grid-template-columns: 1fr
+
+  @media screen and (min-width: $break_lg)
+    grid-template-columns: 1fr 1fr
+    grid-gap: 0 1rem
+    margin-top: 2rem
+
+.step
+  display: grid
+  align-items: center
+  justify-content: space-evenly
+  grid-gap: 0 1rem
+  position: relative
+  padding: 4rem 0
+  border-bottom: 1px solid #e7e7e7
+
+  &:last-of-type
+    border-bottom: none
+
+  &:nth-child(odd)
+    grid-template-columns: max-content auto
+  
+  &:nth-child(even)
+    grid-template-columns: auto max-content
+
+  @media screen and (min-width: $break_lg)
+    border: none
+    padding: 0
+    align-items: unset
+    justify-content: unset
+
+    &:nth-child(odd),
+    &:nth-child(even)
+      grid-template-columns: 1fr 1fr
+
+  &--first
+    .step__phone-image
+      @media screen and (min-width: $break_lg)
+        transform: rotate(-20.93deg)
+
+    .step__arrow
+      top: 10rem
+      right: -8rem
+
+      @media screen and (min-width: $break_xl)
+        top: 13rem
+        right: -8rem
+
+    .step-description
+      @media screen and (min-width: $break_lg)
+        margin-top: 3rem
+
+  &--second
+    @media screen and (min-width: $break_lg)
+      margin-top: 16rem
+
+    .step__arrow
+      top: 10rem
+      left: -12rem
+
+      @media screen and (min-width: $break_xl)
+        top: 24rem
+        left: -12rem
+
+    .step-description
+      @media screen and (min-width: $break_lg)
+        margin-top: 4rem
+
+      @media screen and (min-width: $break_xl)
+        margin-top: 11rem
+
+  &--third
+    @media screen and (min-width: $break_lg)
+      margin-top: -10rem
+
+    .step__arrow
+      top: 14rem
+      right: -12rem
+
+      @media screen and (min-width: $break_xl)
+        right: -10rem
+
+    .step-description
+      @media screen and (min-width: $break_lg)
+        margin-top: 6rem
+
+  &--fourth
+    @media screen and (min-width: $break_lg)
+      margin: 14rem 0 0 -6rem
+
+    .step__phone-image
+      @media screen and (min-width: $break_lg)
+        transform: rotate(-75.56deg)
+        margin-top: 6rem
+
+      @media screen and (min-width: $break_xl)
+        margin: 3rem 0 -2rem
+
+    .step-description
+      order: -1
+
+      @media screen and (min-width: $break_lg)
+        margin-left: -6rem
+        order: 1
+
+  &__phone-image
+    height: auto
+    width: 100px
+    margin: 0 auto
+
+    @media screen and (min-width: $break_md)
+      width: 200px
+
+    @media screen and (min-width: $break_lg)
+      margin: unset
+
+    @media screen and (min-width: $break_xl)
+      width: 324px
+
+  &__arrow
+    display: none
+
+    @media screen and (min-width: $break_lg)
+      display: block
+      position: absolute
+
+.step-description
+  max-width: 280px
+  margin: 2rem auto 0 auto
+
+  @media screen and (min-width: $break_lg)
+    margin: unset
+
+  &__title
+    display: flex
+    align-items: center
+    font-family: LYLS
+    font-size: 1.6rem
+    line-height: 2.1rem
+    background: -webkit-linear-gradient(#F3A300, #F07A13)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    color: $color_orange
+
+    &--number
+      font-size: 4.4rem
+      margin-right: 1.5rem
+
+  &__text
+    margin-top: 1.3rem
+    line-height: 1.5rem
+    color: $color_gray
+
+.hiw-text-bottom
+  background: -webkit-linear-gradient(#F3A300, #F07A13)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  color: $color_orange
+  font-family: LYLS
+  font-size: 2.5rem
+  line-height: 2.3rem
+  text-align: center
+
+.pricing-section
+  background: linear-gradient(123.15deg, #2E158B 25.79%, #531594 72.06%)
+  box-shadow: 0px 0px 20px rgba($color_black, 0.3)
+  padding: 3.1rem 0
+
+  @media screen and (min-width: $break_lg)
+    padding-bottom: 5rem
+
+  .section-title
+    color: $color_white
+
+    &__small-text
+      font-size: 0.95rem
+      font-weight: $weight_medium
+
+.pricing-wrapper
+  position: relative
+  background: $color_white
+  box-shadow: 0px 5px 15px rgba($color_black, 0.25)
+  border-radius: 5px
+  margin-top: 6.6rem
+  padding-bottom: 3rem
+
+  &__phone-image
+    position: absolute
+    top: 0
+    left: 0.5rem
+    transform: translateY(-40%)
+    width: 80px
+    height: auto
+
+    @media screen and (min-width: $break_lg)
+      width: 113px
+      left: 1.8rem
+
+  &__subtitle
+    display: block
+    font-size: 1.25rem
+
+  &__title
+    font-size: 2rem
+    font-weight: $weight_bold
+    color: $color_darkergray
+    padding: 1.5rem 0 1.5rem 7rem
+
+    @media screen and (min-width: $break_lg)
+      font-size: 2.5rem
+      padding: 2.4rem 0 1.95rem 10.5rem
+
+.pricing
+  &--mobile
+    display: block
+
+    @media screen and (min-width: $break_lg)
+      display: none
+
+  &--desktop
+    display: none
+
+    @media screen and (min-width: $break_lg)
+      display: block
+
+.pricing-header,
+.pricing-features__item
+  @media screen and (min-width: $break_lg)
+    display: grid
+    grid-template-areas: "text basic premium spacer"
+    grid-template-columns: 1fr 16% 16% 10%
+    grid-gap: 1rem
+
+.pricing-header
+  border-top: 1px solid $color_orange
+  border-bottom: 1px solid $color_orange
+
+.pricing-type
+  text-align: center
+  font-weight: $weight_bold
+  border-top: 1px solid $color_orange
+  border-bottom: 1px solid $color_orange
+  padding: 1.5rem 0
+
+  @media screen and (min-width: $break_lg)
+    border: none
+
+  &__title
+    font-size: 1.25rem
+    background: -webkit-linear-gradient(#F3A300, #F07A13)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    color: $color_orange
+
+  &__price
+    font-size: 1.6rem
+    margin-top: 1.9rem
+
+  &__discount
+    font-size: 0.95rem
+    font-weight: $weight_semibold
+    color: $color_green
+    margin-top: 0.5rem
+
+  &:first-of-type
+    grid-area: basic
+
+  &:last-of-type
+    grid-area: premium
+
+.pricing-features
+  padding: 1rem
+
+  @media screen and (min-width: $break_lg)
+    padding: 1.5rem 1rem 0.5rem 3rem
+
+  &__item
+    color: $color_gray
+    margin: 1rem 0
+
+    @media screen and (max-width: $break_lg - 1)
+      display: grid
+      grid-template-columns: 25px 1fr
+      align-items: center
+      color: $color_orange
+      margin: 1.5rem 0
+
+    &--disabled
+      @media screen and (max-width: $break_lg - 1)
+        color: $color_gray
+
+        .pricing-features__icon
+          color: $color_lightgray
+
+  &__icon
+    text-align: center
+
+    &--check
+      color: $color_orange
+
+    &--xmark
+      color: $color_lightgray
+
+.pricing-register
+  padding: 0 1.5rem
+
+  @media screen and (min-width: $break_lg)
+    padding: 0 1rem 0 3rem
+
+  &__text
+    text-align: center
+    font-size: 1.25rem
+    font-weight: $weight_bold
+    margin-bottom: 1.5rem
+
+    @media screen and (min-width: $break_lg)
+      text-align: left
+
+  &__buttons
+    justify-content: center
+
+    @media screen and (min-width: $break_lg)
+      justify-content: flex-start
+
